@@ -6,7 +6,9 @@ public with sharing class CIDemoClass {
 		Account a = new Account(Name=Str);
 		try{
 			insert a;
-		}catch(DmlException e){}
+		}catch(DmlException e){
+			system.debug('Exception:'+e.getMessage());
+		}
 		return a;
 	}
 }
